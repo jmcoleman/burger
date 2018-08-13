@@ -1,17 +1,40 @@
-<style media="screen">
-  li {
-    height : 100px;
-    width: 100px;
-    color: red;
-    background-color: purple;
-    margin-bottom: 30px;
-  }
-</style>
+<h1>Eat-Da-Burger!</h1>
 
-<h1>Burgers for {{eater}}</h1>
+img src="{{{burger_image}}}" alt="Burger"/>
+
+<h2>Burger Ready to Serve!</h2>
 
 <ul>
-{{#each burgers }}
-  <li>{{burger}}</li>
-{{/each}}
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/unless}}
+  {{/each}}
 </ul>
+
+<h2>Burgers Devoured!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burg">Burger Name:</label>
+    <input type="text" id="burg" name="burger_name">
+  </div>
+
+  <div class="form-group">
+    <label for="devoured">Has it been eaten?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devoured<br>
+    <input type="radio" name="devoured" value="0"> Served
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
