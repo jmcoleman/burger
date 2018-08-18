@@ -1,14 +1,14 @@
 # Eat-Da-Burger
-Burger App that uses Node, Express, and Handlebars against a MySql database.
+Eat-Da-Burger is a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM. It follows the MVC design pattern and uses Node and MySQL to query and route data in the app. It uses Handlebars to generate the HTML.
 
 **Problem it solves:** \
-??.
+Allows burgers to be tracked accoridng to whether they are devoured or not.
 
 **How solved:** \
-??.
+New burgers are added and as they are devoured, their state updates and is persisted in the database.  The burger and it's state is presented on the UI with the ability to change state.
 
 **Technical approach:** \
-??
+Creation of a burger logger that persists the burger name and state in MySQL.  Node, Express, Handlebars and a homemade ORM is used implementing a homemade ORM and the MVC design pattern.
 
 ## Getting Started
 
@@ -28,13 +28,14 @@ node server.js
 https://localhost:8080
 ```
 
-1. Go to Survey
-2. Enter new person
+1. Enter One or More New Burgers
+2. Click on the Devour button to change the state of a specific burger
+3. Click on the Delete button to delete a burger.
 
 
 ### Prerequisites
 
-Node, NPM, MySql
+Node, NPM, MySql, Express, Handlebars
 
 ### Installing
 

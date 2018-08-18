@@ -42,6 +42,7 @@ return arr.toString();
 var orm = {
     selectAll: function(tableName, cb){
         var queryString = "SELECT * FROM " + tableName + ";";
+        console.log(queryString);
 
         connection.query(queryString,
             function(err, result) {
@@ -54,7 +55,6 @@ var orm = {
         var queryString = "INSERT INTO " + tableName 
                 + "(" + cols.toString() + ") VALUES (" + 
                 printQuestionMarks(vals.length) + ") ";
-
         console.log(queryString);
 
         connection.query(queryString, vals,  function(err, result) {
@@ -65,7 +65,6 @@ var orm = {
     updateOne: function(tableName, objColVals, condition, cb) {
         var queryString = "UPDATE " + tableName + " SET " 
                 + objToSql(objColVals) + " WHERE " + condition;
-
         console.log(queryString);
 
         connection.query(queryString, function(err, result) {
@@ -77,7 +76,8 @@ var orm = {
         var queryString = "DELETE FROM " + tableName;
         queryString += " WHERE ";
         queryString += condition;
-    
+        console.log(queryString);
+            
         connection.query(queryString, function(err, result) {
           if (err) {
             throw err;
