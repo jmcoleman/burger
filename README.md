@@ -52,7 +52,8 @@ Testing was done to create, read, update and devour burgers.
 
 The project should be run from the browser by specifying http://localhost:8080 after starting node.
 
-The project is hosted on heroku at ???
+The project is hosted on heroku at https://calm-meadow-47544.herokuapp.com/ 
+(https://git.heroku.com/calm-meadow-47544.git)
 
 ## Built With
 
