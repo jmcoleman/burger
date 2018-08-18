@@ -5,6 +5,3 @@ insert into burgers (burger_name) values ('Yankee Burger');
 insert into burgers (burger_name) values ('Dixie Burger');
 insert into burgers (burger_name) values ('Cowboy Burger');
 insert into burgers (burger_name) values ('Salsa Burger');
-
--- select * from burgers;
--- truncate table burgers;

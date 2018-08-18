@@ -12,7 +12,10 @@ Creation of a burger logger that persists the burger name and state in MySQL.  N
 
 ## Getting Started
 
-Clone the repository locally and run the below from the root directory of the project:
+1. Clone the repository locally
+2. Setup the database by running the db/schema.sql and db/seeds.sql files.
+3. Modify the config/connection.js file with the hostname, port, user, password, and database of your db
+4. Run the below from the root directory of the project via the terminal:
 
 ```
 # install needed packages

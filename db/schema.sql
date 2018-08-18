@@ -1,5 +1,4 @@
--- drop database burgers_db;
-
+drop database burgers_db;
 create database burgers_db;
 
 use burgers_db;
@@ -10,5 +9,3 @@ create table burgers (
     devoured boolean DEFAULT false,
     PRIMARY KEY(id)
 );
-
--- select * from burgers;

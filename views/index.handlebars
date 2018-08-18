@@ -1,33 +1,39 @@
-<h1>Eat-Da-Burger!</h1>
+<header class="header">
+  <img src="burger.png" alt="Burger"/>
+  <h1>Eat-Da-Burger!</h1>
+</header>
 
-<img src="burger.png" alt="Burger"/>
+<div class="wrapper">
+  <div class="left-content">
+    <h2>Ready to Serve</h2>
+    <ul>
+      {{#each burgers}}
+        {{#unless devoured}}
+          {{> burgers/burger-block devoured=0}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
 
-<h2>Burger Ready to Serve!</h2>
+  <div class="right-content">
+    <h2>Devoured</h2>
+    <ul>
+      {{#each burgers}}
+        {{#if devoured}}
+          {{> burgers/burger-block devoured=1}}
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=0}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers Devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=1}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
+<!--h2>Add a Burger</h2-->
 <form method="POST" action="/api/burgers" class="create-form">
 
   <div class="form-group">
-    <label for="burg">Burger Name:</label>
-    <input type="text" id="burg" name="burger_name">
+    <!--label for="burg">Burger Name:</label-->
+    <!--input type="text" id="burg" name="burger_name"-->
+    <textarea id="burg" name="burger_name" rows="4" cols="50"></textarea>
   </div>
 
   <!--div class="form-group">
@@ -36,5 +42,7 @@
     <input type="radio" name="devoured" value="0"> Served
   </div-->
 
-  <button type="submit">Add Burger</button>
+  <button id="burger-submit" type="submit">Submit</button>
+  <p>Enter a burger you want to eat.  Click the "Submit" button.</p>
+
 </form>
