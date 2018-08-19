@@ -2,23 +2,33 @@ html, body {
     width: 100%;
     background-color: rgb(243, 210, 101);
     min-width: 500px;
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
     color: rgb(204, 0, 0);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 li {
     padding: 5px;
-    margin: 5px;
 }
 
-ul {
+#main * ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 button {
-    padding: 5px 8px;
+    padding: 8px 8px;
 }
 
 .label {
@@ -26,7 +36,8 @@ button {
 }
 
 .form-group {
-    margin-bottom: 5px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 #main {
@@ -34,7 +45,7 @@ button {
 }
 
 #burger-item {
-    padding: 10px 5px;
+    padding: 10px;
     margin-right: 10px;
 }
 
@@ -45,6 +56,9 @@ button {
     padding: 8px;
 }
 
+/***************************
+** grid wrapper styling
+****************************/
 /* use grid to format burgers */
 .header {
     grid-area: header;
@@ -60,24 +74,33 @@ button {
 
 .wrapper {
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 50% 50%x;
+    grid-gap: 0px 40px;
+    grid-template-columns: 50% 50%;
     grid-template-areas:
         "header header"
         "burgers devoured-burgers";
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
+/***************************
+** flex wrapper styling
+****************************/
+.flex-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flex-wrapper #burger-item {
+    margin-right: auto;
+}
 
 /**************************************
 ** Media queries
 **************************************/
-
-/*** RESPONSIVE TOPOGRAPHY ***/
-
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
+
 @media (max-width: 575px) {  
     html {
         font-size: .8rem;

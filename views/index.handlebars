@@ -1,9 +1,10 @@
 <header class="header">
-  <img src="burger.png" alt="Burger"/>
+  <img src="burgerapp2.jpg" alt="Burger"/>
   <h1>Eat-Da-Burger!</h1>
 </header>
 
-<div class="wrapper">
+<div id="main" class="wrapper">
+   {{#if burgers}}
   <div class="left-content">
     <h2>Ready to Serve</h2>
     <ul>
@@ -25,6 +26,8 @@
       {{/each}}
     </ul>
   </div>
+  {{/if}}
+
 </div>
 
 <!--h2>Add a Burger</h2-->

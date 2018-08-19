@@ -1,14 +1,19 @@
 <li>
-	<span id="burger-item">
-		{{id}}. {{burger_name}}
-	</span>
+	<div class="flex-wrapper">
+		<span id="burger-item" class="flex-item">
+			{{id}}. {{burger_name}}
+		</span>
 
-	{{#unless devoured}}
-		<button class="change-devoured" data-id="{{id}}" data-newdevoured="1">
-			Devour It!
-		</button>
-	{{/unless}}
+		<div id="btns" class="flex-item">
+			{{#unless devoured}}
+				<button class="change-devoured" data-id="{{id}}" data-newdevoured="1">
+					Devour It!
+				</button>
+			{{/unless}}
 
-	<button class="delete-burger" data-id="{{this.id}}">Delete</button>
+			<button class="delete-burger" data-id="{{this.id}}">Delete</button>
+		</div>
+
+	</div>
 </li>
 	
