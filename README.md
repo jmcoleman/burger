@@ -8,7 +8,7 @@ Allows burgers to be tracked accoridng to whether they are devoured or not.
 New burgers are added and as they are devoured, their state updates and is persisted in the database.  The burger and it's state is presented on the UI with the ability to change state.
 
 **Technical approach:** \
-Creation of a burger logger that persists the burger name and state in MySQL.  Node, Express, Handlebars and a homemade ORM is used implementing a homemade ORM and the MVC design pattern.
+Creation of a burger logger that persists the burger name and state in MySQL.  Node, Express, Handlebars and a homemade ORM is used implementing the MVC design pattern.
 
 ## Getting Started
 
